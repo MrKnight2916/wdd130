@@ -1,3 +1,26 @@
+/* Navigation container */
+nav {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+/* Navigation links */
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #007acc;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Heading 1 style */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 /* Limit main width and center */
 main {
   max-width: 840px;
@@ -43,21 +66,4 @@ footer {
   padding-top: 10px;
   font-size: 0.9rem;
   color: #555;
-}
-
-/* Navigation links */
-nav a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #007acc;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Optional h1 style */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
