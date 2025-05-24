@@ -1,0 +1,57 @@
+/* Limit the width of main and center it */
+main {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Styles for aside */
+aside {
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2); /* subtle and transparent border */
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+}
+
+/* Image inside aside */
+aside img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Image inside main */
+main img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs with no padding */
+p {
+  padding: 0;
+}
+
+/* Style for footer */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Optional: styles for navigation */
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #007acc;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
