@@ -1,4 +1,4 @@
-/* Variables CSS para colores y fuentes */
+/* CSS Variables for colors and fonts */
 :root {
   --primary-color: #1E90FF;     /* Dodger Blue */
   --secondary-color: #2E8B57;   /* Sea Green */
@@ -9,26 +9,26 @@
   --body-font: 'Open Sans', sans-serif;
 }
 
-/* Reset universal */
+/* Universal reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body con fuente y color de texto */
+/* Body with font and text color */
 body {
   font-family: var(--body-font);
   color: var(--secondary-color);
 }
 
-/* Limitar ancho y centrar contenido */
+/* Limit width and center content */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Header con color de fondo y texto */
+/* Header with background and text color */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
@@ -38,12 +38,12 @@ header {
   justify-content: space-between;
 }
 
-/* Imagen del logo en header */
+/* Logo image in header */
 header img {
   height: 100px;
 }
 
-/* Navegación: enlaces sin subrayado, con margen y color */
+/* Navigation: links without underline, with margin and color */
 nav a {
   margin-left: 20px;
   color: var(--accent2-color);
@@ -55,44 +55,44 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Estilos para encabezados */
+/* Styles for headings */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* Margen y padding consistente para nav, p, section, article */
+/* Consistent margin and padding for nav, p, section, article */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Eliminar subrayado de enlaces a imágenes de redes sociales */
+/* Remove underline from social media image links */
 .socialmedia a {
   text-decoration: none;
   margin-right: 12px;
 }
 
-/* Tamaño de iconos sociales */
+/* Size of social media icons */
 .socialmedia img {
   width: 24px;
   height: 24px;
 }
 
-/* Hero div con posición relativa */
+/* Hero div with relative positioning */
 .hero {
   position: relative;
   margin: 16px 0;
 }
 
-/* Imagen dentro de hero para que ocupe todo el ancho */
+/* Image inside hero to fill the entire width */
 .hero img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* Encabezado h1 dentro de hero con posicionamiento absoluto */
+/* h1 heading inside hero with absolute positioning */
 .hero h1 {
   position: absolute;
   top: 20px;
@@ -104,7 +104,7 @@ nav, p, section, article {
   color: #fff;
 }
 
-/* Artículo dentro de hero con posicionamiento absoluto y fondo semi-transparente */
+/* Article inside hero with absolute positioning and semi-transparent background */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -116,7 +116,7 @@ nav, p, section, article {
   color: #000;
 }
 
-/* Imagen dentro del artículo hero, a la derecha, con margen y ancho fijo */
+/* Image inside hero article, floated to the right, with margin and fixed width */
 .hero article img {
   float: right;
   width: 125px;
@@ -124,7 +124,7 @@ nav, p, section, article {
   border-radius: 8px;
 }
 
-/* Imágenes en secciones con tamaño fijo y margen */
+/* Images in sections with fixed size and margin */
 section img {
   width: 150px;
   margin-right: 10px;
@@ -132,10 +132,10 @@ section img {
   vertical-align: middle;
 }
 
+/* Custom image class */
 .img-custom {
   width: 1000px;
   height: 667px;
   object-fit: cover;
-  border-radius: 8px; /* opcional para bordes redondeados */
+  border-radius: 8px; /* optional for rounded corners */
 }
-
