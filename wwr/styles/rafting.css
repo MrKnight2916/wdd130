@@ -29,30 +29,124 @@ header, main, footer {
 }
 
 /* Header with background and text color */
+/* Header con CSS Grid para layout general, pero conservando colores, padding y estilo */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
-  padding: 12px;
-  display: flex;
+  padding: 12px 24px;
+  display: grid; /* cambio de flex a grid */
+  grid-template-columns: auto 1fr auto; /* logo - espacio para título - nav */
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 }
 
-/* Logo image in header */
+/* Logo imagen, conservar altura original */
 header img {
   height: 100px;
+  width: auto;
 }
 
-/* Navigation: links without underline, with margin and color */
+/* Agregar un título h1 en header para que el grid tenga el centro (opcional) */
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  color: var(--accent2-color);
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Nav con display flex para alinear horizontalmente los enlaces */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+/* Mantener tus estilos de nav a */
 nav a {
-  margin-left: 20px;
   color: var(--accent2-color);
   text-decoration: none;
   font-weight: 600;
+  margin-left: 0; /* quitamos margen izquierdo porque usamos gap en nav */
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: var(--accent1-color);
+  color: #000;
+  text-decoration: none; /* cambiar underline por cambio de fondo */
+}
+/* Header ya lo tienes, no cambia */
+
+/* History Section */
+/*
+section:nth-of-type(1) { 
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto 32px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+*/
+
+/* Adventure Section */
+/* section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin-bottom: 32px;
+  gap: 10px;
+} */
+
+/* Figure styling for adventure images */
+/*
+section:nth-of-type(2) figure {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+section:nth-of-type(2) figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+section:nth-of-type(2) figcaption {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+*/
+
+/* Footer social media alignment */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  width: 840px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer .socialmedia {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 /* Styles for headings */
@@ -139,3 +233,102 @@ section img {
   object-fit: cover;
   border-radius: 8px; /* optional for rounded corners */
 }
+
+/* ====================  HISTORY  ==================== */
+/* NEW */
+.history {
+  margin: 40px 0; /* menos margen horizontal para que no se "desplace" */
+  max-width: 840px; /* asegurar ancho máximo consistente */
+  padding: 0 16px;  /* un poco de padding para que no toque bordes */
+}
+
+.history h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* NEW: texto a los extremos y la imagen en el medio */
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%; /* asegurar que use todo el ancho disponible */
+}
+
+.history-content p {
+  flex: 1 1 30%;
+  min-width: 200px;
+  text-align: justify;
+}
+
+.history-content img {
+  flex: 0 0 280px;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+
+/* ====================  ADVENTURE  =================== */
+/* NEW */
+/* NEW: adventure section layout */
+.adventure {
+  margin: 40px 16px;
+  max-width: 840px;
+  padding: 0 16px;
+}
+
+.adventure h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Galería de imágenes en fila, espacio entre ellas */
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+/* Cada figura ocupa igual espacio y centra contenido */
+.adventure-gallery figure {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* Imagen con bordes redondeados y tamaño ajustado */
+.adventure-gallery img {
+  height: 180px;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Texto debajo de la imagen centrado y destacado */
+.adventure-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+
+/* ====================  FOOTER  ====================== */
+/* NEW: Alinea los íconos a la derecha */
+footer .socialmedia {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
