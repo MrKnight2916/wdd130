@@ -1,4 +1,4 @@
-/* CSS Variables for colors and fonts */
+/* ==================== Variables CSS ==================== */
 :root {
   --primary-color: #1E90FF;     /* Dodger Blue */
   --secondary-color: #2E8B57;   /* Sea Green */
@@ -9,44 +9,40 @@
   --body-font: 'Open Sans', sans-serif;
 }
 
-/* Universal reset */
+/* ==================== Reset universal ==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body with font and text color */
+/* ==================== Base ==================== */
 body {
   font-family: var(--body-font);
   color: var(--secondary-color);
 }
 
-/* Limit width and center content */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Header with background and text color */
-/* Header con CSS Grid para layout general, pero conservando colores, padding y estilo */
+/* ==================== Header ==================== */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
   padding: 12px 24px;
-  display: grid; /* cambio de flex a grid */
-  grid-template-columns: auto 1fr auto; /* logo - espacio para título - nav */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
 }
 
-/* Logo imagen, conservar altura original */
 header img {
   height: 100px;
   width: auto;
 }
 
-/* Agregar un título h1 en header para que el grid tenga el centro (opcional) */
 header h1 {
   font-family: var(--heading-font);
   font-size: 1.8rem;
@@ -56,19 +52,17 @@ header h1 {
   align-self: center;
 }
 
-/* Nav con display flex para alinear horizontalmente los enlaces */
+/* ==================== Navigation ==================== */
 nav {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
 }
 
-/* Mantener tus estilos de nav a */
 nav a {
   color: var(--accent2-color);
   text-decoration: none;
   font-weight: 600;
-  margin-left: 0; /* quitamos margen izquierdo porque usamos gap en nav */
   padding: 6px 8px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -77,54 +71,158 @@ nav a {
 nav a:hover {
   background-color: var(--accent1-color);
   color: #000;
-  text-decoration: none; /* cambiar underline por cambio de fondo */
-}
-/* Header ya lo tienes, no cambia */
-
-/* History Section */
-/*
-section:nth-of-type(1) { 
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 800px;
-  margin: 0 auto 32px auto;
-  padding: 0 16px;
-  line-height: 1.6;
-}
-*/
-
-/* Adventure Section */
-/* section:nth-of-type(2) {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
-  margin-bottom: 32px;
-  gap: 10px;
-} */
-
-/* Figure styling for adventure images */
-/*
-section:nth-of-type(2) figure {
-  margin: 0;
-  flex: 1;
-  text-align: center;
+  text-decoration: none;
 }
 
-section:nth-of-type(2) figure img {
+/* ==================== Headings ==================== */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* ==================== Layout spacing ==================== */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+  position: relative;
+  margin: 16px 0;
+}
+
+.hero img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 215, 0, 0.8);
+  padding: 12px;
+  max-width: 300px;
+  border-radius: 8px;
+  color: #000;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+/* ==================== Images ==================== */
+section img {
+  width: 150px;
+  margin-right: 10px;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+.img-custom {
+  width: 1000px;
+  height: 667px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ==================== History Section ==================== */
+.history {
+  margin: 40px 0;
+  max-width: 840px;
+  padding: 0 16px;
+}
+
+.history h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.history-content p {
+  flex: 1 1 30%;
+  min-width: 200px;
+  text-align: justify;
+}
+
+.history-content img {
+  flex: 0 0 280px;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+/* ==================== Adventure Section ==================== */
+.adventure {
+  margin: 40px 16px;
+  max-width: 840px;
+  padding: 0 16px;
+}
+
+.adventure h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.adventure-gallery figure {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.adventure-gallery img {
+  height: 180px;
+  width: 100%;
+  max-width: 150px;
   border-radius: 8px;
   object-fit: cover;
 }
 
-section:nth-of-type(2) figcaption {
+.adventure-gallery figcaption {
   margin-top: 8px;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--secondary-color);
+  text-align: center;
 }
-*/
 
-/* Footer social media alignment */
+/* ==================== Footer ==================== */
 footer {
   display: flex;
   justify-content: space-between;
@@ -149,186 +247,14 @@ footer .socialmedia {
   flex: 1;
 }
 
-/* Styles for headings */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* Consistent margin and padding for nav, p, section, article */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Remove underline from social media image links */
-.socialmedia a {
-  text-decoration: none;
-  margin-right: 12px;
-}
-
-/* Size of social media icons */
-.socialmedia img {
+footer .socialmedia img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
 }
 
-/* Hero div with relative positioning */
-.hero {
-  position: relative;
-  margin: 16px 0;
+footer .socialmedia img:hover {
+  filter: brightness(0) invert(0.6);
 }
-
-/* Image inside hero to fill the entire width */
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* h1 heading inside hero with absolute positioning */
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
-}
-
-/* Article inside hero with absolute positioning and semi-transparent background */
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(255, 215, 0, 0.8);
-  padding: 12px;
-  max-width: 300px;
-  border-radius: 8px;
-  color: #000;
-}
-
-/* Image inside hero article, floated to the right, with margin and fixed width */
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 10px;
-  border-radius: 8px;
-}
-
-/* Images in sections with fixed size and margin */
-section img {
-  width: 150px;
-  margin-right: 10px;
-  margin-top: 10px;
-  vertical-align: middle;
-}
-
-/* Custom image class */
-.img-custom {
-  width: 1000px;
-  height: 667px;
-  object-fit: cover;
-  border-radius: 8px; /* optional for rounded corners */
-}
-
-/* ====================  HISTORY  ==================== */
-/* NEW */
-.history {
-  margin: 40px 0; /* menos margen horizontal para que no se "desplace" */
-  max-width: 840px; /* asegurar ancho máximo consistente */
-  padding: 0 16px;  /* un poco de padding para que no toque bordes */
-}
-
-.history h2 {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.history-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* NEW: texto a los extremos y la imagen en el medio */
-  gap: 20px;
-  flex-wrap: nowrap;
-  width: 100%; /* asegurar que use todo el ancho disponible */
-}
-
-.history-content p {
-  flex: 1 1 30%;
-  min-width: 200px;
-  text-align: justify;
-}
-
-.history-content img {
-  flex: 0 0 280px;
-  border-radius: 8px;
-  object-fit: cover;
-  max-height: 250px;
-}
-
-
-/* ====================  ADVENTURE  =================== */
-/* NEW */
-/* NEW: adventure section layout */
-.adventure {
-  margin: 40px 16px;
-  max-width: 840px;
-  padding: 0 16px;
-}
-
-.adventure h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-/* Galería de imágenes en fila, espacio entre ellas */
-.adventure-gallery {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: nowrap;
-}
-
-/* Cada figura ocupa igual espacio y centra contenido */
-.adventure-gallery figure {
-  flex: 1 1 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-}
-
-/* Imagen con bordes redondeados y tamaño ajustado */
-.adventure-gallery img {
-  height: 180px;
-  width: 100%;
-  max-width: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Texto debajo de la imagen centrado y destacado */
-.adventure-gallery figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  text-align: center;
-}
-
-
-/* ====================  FOOTER  ====================== */
-/* NEW: Alinea los íconos a la derecha */
-footer .socialmedia {
-  display: flex;
-  gap: 16px;
-  justify-content: flex-end;
-  flex: 1;
-}
-
