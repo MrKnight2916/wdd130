@@ -169,14 +169,12 @@ nav, p, section, article {
   max-width: 300px;
   border-radius: 8px;
   color: #000;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .hero-index article img {
   float: right;
   width: 125px;
-  display: block;
-  margin: 10px auto 0 auto;
+  margin-left: 10px;
   border-radius: 8px;
 }
 
@@ -603,11 +601,14 @@ footer .socialmedia img:hover {
   margin-bottom: 1rem;
 }
 
-.info-grid h3 {
-  color: #1e90ff;
-  margin-bottom: 0.5rem;
+.info-grid > h2 {
+  grid-column: 1 / -1;      /* Que ocupe todas las columnas */
+  text-align: center;       /* Centrar texto */
+  margin-bottom: 1.5rem;    /* Separación abajo */
+  font-family: 'Montserrat', sans-serif; /* Puedes usar tu fuente de títulos */
   font-weight: 700;
-  font-size: 1.4rem;
+  color: var(--primary-color); /* O el color que prefieras */
+  font-size: 2rem;
 }
 
 .info-grid p {
