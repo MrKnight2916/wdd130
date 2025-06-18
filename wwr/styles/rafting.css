@@ -129,21 +129,20 @@ nav, p, section, article {
 
 /* ==================== Hero Section for Index ==================== */
 .hero-index {
-  position: relative;      /* same as .hero           */
-  margin: 16px 0;          /* same spacing            */
-  overflow: visible;       /* let content flow        */
-  height: auto;            /* grow naturally          */
-  max-height: none;        /* remove 490 px cap       */
+  position: relative;      
+  margin: 16px 0;          
+  overflow: visible;       
+  height: auto;            
+  max-height: none;        
 }
 
 .hero-index img {
   display: block;
   width: 100%;
-  height: auto;            /* don’t stretch vertically */
-  object-fit: cover;       /* optional: keep it        */
+  height: auto;            
+  object-fit: cover;       
 }
 
-/* heading bar identical to .hero h1 */
 .hero-index h1 {
   position: absolute;
   top: 20px;
@@ -153,7 +152,6 @@ nav, p, section, article {
   opacity: 0.7;
   background-color: var(--accent1-color);
   color: #fff;
-  /* remove extra centering & styling */
   border-radius: 0;
   font-size: 1.8rem;
   box-shadow: none;
@@ -310,10 +308,10 @@ footer .socialmedia img:hover {
   filter: brightness(0) invert(0.6);
 }
 
-/* ==== Company Info ==== */
+/* ==================== Company Info ==================== */
 .company-info {
   padding: 1rem;
-  background-color: #f0f8ff; /* suave, coherente con azul */
+  background-color: #f0f8ff; 
   border-radius: 8px;
   margin-bottom: 2rem;
 }
@@ -321,7 +319,7 @@ footer .socialmedia img:hover {
 .company-info h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #2e8b57; /* verde de la paleta */
+  color: #2e8b57; 
   margin-bottom: 1rem;
 }
 
@@ -332,7 +330,7 @@ footer .socialmedia img:hover {
   margin-bottom: 0.5rem;
 }
 
-/* ==== Google Map ==== */
+/* ==================== Google Map ==================== */
 .map-container {
   margin-top: 1rem;
   width: 100%;
@@ -345,18 +343,18 @@ footer .socialmedia img:hover {
 .map-container iframe {
   width: 100%;
   height: 100%;
-  border: none; /* elimina el borde */
+  border: none; 
   display: block;
 }
 
-/* ==== Employee Profiles ==== */
+/* ==================== Employee Profiles ==================== */
 .employees {
   margin-bottom: 2rem;
 }
 
 .employees h2 {
   text-align: center;
-  color: #1e90ff; /* azul vivo de la paleta */
+  color: #1e90ff; 
   margin-bottom: 1rem;
 }
 
@@ -374,9 +372,9 @@ footer .socialmedia img:hover {
 }
 
 .employee-profiles img {
-  width: 150px;       /* tamaño fijo igual para todas */
-  height: 150px;      /* tamaño fijo para que queden cuadradas */
-  object-fit: cover;  /* para que la imagen se recorte proporcionalmente */
+  width: 150px;       
+  height: 150px;      
+  object-fit: cover;  
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   margin-bottom: 0.5rem;
@@ -387,7 +385,7 @@ footer .socialmedia img:hover {
   color: #2e8b57;
 }
 
-/* ==== Contact Form ==== */
+/* ==================== Contact Form ==================== */
 .contact-form {
   background-color: #f9f9f9;
   padding: 1.5rem;
@@ -475,10 +473,10 @@ footer .socialmedia img:hover {
   outline: none;
 }
 
-/* ====== Newsletter Section ====== */
+/* ==================== Newsletter Section ==================== */
 .newsletter {
-  background-color: #f0f8ff; /* light, airy background */
-  padding: 3rem 2rem;       /* aumenté el padding arriba y abajo a 3rem */
+  background-color: #f0f8ff; 
+  padding: 3rem 2rem;       
   border-radius: 8px;
   max-width: 600px;
   margin: 0 auto 3rem auto;
@@ -490,7 +488,7 @@ footer .socialmedia img:hover {
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  color: #2e8b57; /* green accent */
+  color: #2e8b57; 
 }
 
 .newsletter form {
@@ -506,12 +504,12 @@ footer .socialmedia img:hover {
 
 .newsletter input[type="text"],
 .newsletter input[type="email"] {
-  padding: 1rem 0.8rem; /* aumenté el padding vertical */
+  padding: 1rem 0.8rem; 
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
-  min-height: 40px; /* opcional para asegurar un mínimo */
+  min-height: 40px; 
 }
 
 .newsletter input[type="text"]:focus,
@@ -530,14 +528,14 @@ footer .socialmedia img:hover {
   cursor: pointer;
   font-size: 1.1rem;
   transition: background-color 0.3s ease;
-  min-height: 44px; /* botón un poco más alto */
+  min-height: 44px; 
 }
 
 .newsletter button:hover {
   background-color: #007acc;
 }
 
-/* ====== Call to Action Section ====== */
+/* ==================== Call to Action Section ==================== */
 .call-to-action {
   text-align: center;
   margin-bottom: 3rem;
@@ -557,7 +555,7 @@ footer .socialmedia img:hover {
 }
 
 .call-to-action .btn {
-  background-color: #ffd700; /* gold */
+  background-color: #ffd700; 
   color: #2e8b57;
   font-weight: 700;
   padding: 0.75rem 2rem;
@@ -572,7 +570,7 @@ footer .socialmedia img:hover {
   background-color: #e6c200;
 }
 
-/* ====== Info Grid Section ====== */
+/* ==================== Info Grid Section ==================== */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -604,12 +602,12 @@ footer .socialmedia img:hover {
 }
 
 .info-grid > h2 {
-  grid-column: 1 / -1;      /* Que ocupe todas las columnas */
-  text-align: center;       /* Centrar texto */
-  margin-bottom: 1.5rem;    /* Separación abajo */
-  font-family: 'Montserrat', sans-serif; /* Puedes usar tu fuente de títulos */
+  grid-column: 1 / -1;      
+  text-align: center;       
+  margin-bottom: 1.5rem;    
+  font-family: 'Montserrat', sans-serif; 
   font-weight: 700;
-  color: var(--primary-color); /* O el color que prefieras */
+  color: var(--primary-color); 
   font-size: 2rem;
 }
 
@@ -619,13 +617,9 @@ footer .socialmedia img:hover {
   line-height: 1.5;
 }
 
-/* ======================================================= */
-/* ===== Trips Page Styles  (añadir al final del CSS) ===== */
-/* ======================================================= */
-
-/* ---------- 1. Call‑to‑Action superior ---------- */
+/* ==================== Call to Action superior ==================== */
 .trips-cta {
-  background-color: var(--secondary-color);      /* verde */
+  background-color: var(--secondary-color);      
   color: #fff;
   padding: 2rem;
   text-align: center;
@@ -636,17 +630,21 @@ footer .socialmedia img:hover {
 }
 
 .trips-cta h2 {
-  color: #fff !important;
+  color: #fff;
 }
 
-.trips-cta h2 { font-size: 2rem; margin-bottom: .75rem; }
+.trips-cta h2 { 
+  font-size: 2rem; margin-bottom: .75rem; 
+}
 
-.trips-cta p  { font-size: 1.1rem; margin-bottom: 1.25rem; }
+.trips-cta p  { 
+  font-size: 1.1rem; margin-bottom: 1.25rem; 
+}
 
 .trips-cta a {
   display: inline-block;
-  background: var(--accent1-color);              /* dorado */
-  color: var(--secondary-color);                 /* verde */
+  background: var(--accent1-color);              
+  color: var(--secondary-color);                
   padding: .75rem 2rem;
   font-weight: 700;
   border-radius: 25px;
@@ -654,9 +652,11 @@ footer .socialmedia img:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,.15);
   transition: background .25s, transform .25s;
 }
-.trips-cta a:hover { background:#e6c200; transform: scale(1.05); }
+.trips-cta a:hover { 
+  background:#e6c200; transform: scale(1.05); 
+}
 
-/* ---------- 2. Tarjetas de viajes (grid) ---------- */
+/* ==================== Travel cards (grid) ==================== */
 .trips-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -675,7 +675,6 @@ footer .socialmedia img:hover {
   transition: transform 0.3s ease;
 }
 
-/* Posiciones explícitas */
 .trips-list article:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
@@ -713,26 +712,23 @@ footer .socialmedia img:hover {
 }
 
 .trips-list-section h2 {
-  color: var(--primary-color); /* Azul */
+  color: var(--primary-color); 
   text-align: center;
   margin-bottom: 2rem;
   font-family: var(--heading-font);
 }
 
-
-
-
-
 main {
   width: auto;
-  max-width: 870px; /* O un valor que quieras */
+  max-width: 870px; 
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-
-/* ---------- 3. Tabla de comparativa ---------- */
-.trips-table-section { margin-bottom: 4rem; }
+/* ==================== Comparison Table ==================== */
+.trips-table-section { 
+  margin-bottom: 4rem; 
+}
 
 .trips-table-section h2 {
   font-family: var(--heading-font);
@@ -747,14 +743,19 @@ main {
   font-family: var(--body-font);
 }
 
-.trips-table thead { background: var(--primary-color); color:#fff; }
+.trips-table thead { 
+  background: var(--primary-color); color:#fff; 
+}
 
 .trips-table th, .trips-table td {
-  padding: 12px 15px; text-align:left; border-bottom:1px solid #e0e0e0;
+  padding: 12px 15px; text-align:left; 
+  border-bottom:1px solid #e0e0e0;
 }
-.trips-table tbody tr:hover { background: var(--accent2-color); }
+.trips-table tbody tr:hover { 
+  background: var(--accent2-color); 
+}
 
-/* ---- versión responsive de la tabla (≤600 px) ---- */
+/* ==================== Responsive Design ==================== */
 @media (max-width:600px){
   .trips-table thead { display:none; }
   .trips-table, .trips-table tbody, .trips-table tr, .trips-table td {
@@ -770,6 +771,4 @@ main {
     font-weight:700;
   }
 }
-/* ======================================================= */
-/* ===========  Fin de estilos para Trips page  =========== */
-/* ======================================================= */
+
