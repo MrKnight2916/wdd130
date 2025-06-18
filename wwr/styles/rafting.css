@@ -129,39 +129,35 @@ nav, p, section, article {
 
 /* ==================== Hero Section for Index ==================== */
 .hero-index {
-  position: relative;
-  margin: 16px 0;
-  overflow: hidden;
-  max-height: 490px;
+  position: relative;      /* same as .hero           */
+  margin: 16px 0;          /* same spacing            */
+  overflow: visible;       /* let content flow        */
+  height: auto;            /* grow naturally          */
+  max-height: none;        /* remove 490 px cap       */
 }
 
 .hero-index img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
+  width: 100%;
+  height: auto;            /* don’t stretch vertically */
+  object-fit: cover;       /* optional: keep it        */
 }
 
+/* heading bar identical to .hero h1 */
 .hero-index h1 {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 90%;
+  width: 98%;
   padding: 16px;
   text-align: center;
-  opacity: 0.85;
+  opacity: 0.7;
   background-color: var(--accent1-color);
   color: #fff;
-  border-radius: 8px;
-  font-size: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  /* remove extra centering & styling */
+  border-radius: 0;
+  font-size: 1.8rem;
+  box-shadow: none;
+  transform: none;
 }
 
 .hero-index article {
@@ -178,150 +174,12 @@ nav, p, section, article {
 
 .hero-index article img {
   float: right;
-  width: 150px;
+  width: 145px;
   display: block;
   margin: 10px auto 0 auto;
   border-radius: 8px;
 }
 
-/* ====== Newsletter Section ====== */
-.newsletter {
-  background-color: #f0f8ff; /* light, airy background */
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-family: 'Open Sans', sans-serif;
-}
-
-.newsletter h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  color: #2e8b57; /* green accent */
-}
-
-.newsletter form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.newsletter label {
-  font-weight: 600;
-  color: #333;
-}
-
-.newsletter input[type="text"],
-.newsletter input[type="email"] {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.newsletter input[type="text"]:focus,
-.newsletter input[type="email"]:focus {
-  border-color: #1e90ff;
-  outline: none;
-}
-
-.newsletter button {
-  background-color: #1e90ff;
-  color: white;
-  font-weight: 700;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.newsletter button:hover {
-  background-color: #007acc;
-}
-
-/* ====== Call to Action Section ====== */
-.call-to-action {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.call-to-action h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.8rem;
-  color: #2e8b57;
-}
-
-.call-to-action p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-
-.call-to-action .btn {
-  background-color: #ffd700; /* gold */
-  color: #2e8b57;
-  font-weight: 700;
-  padding: 0.75rem 2rem;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-  transition: background-color 0.3s ease;
-}
-
-.call-to-action .btn:hover {
-  background-color: #e6c200;
-}
-
-/* ====== Info Grid Section ====== */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto 4rem auto;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.info-grid article {
-  background-color: #f0f8ff;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.info-grid article:hover {
-  transform: translateY(-6px);
-}
-
-.info-grid img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.info-grid h3 {
-  color: #1e90ff;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
-.info-grid p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.5;
-}
 
 /* ==================== Images ==================== */
 section img {
@@ -618,6 +476,145 @@ footer .socialmedia img:hover {
 .contact-form button[type="submit"]:focus {
   background-color: #2e8b57;
   outline: none;
+}
+
+/* ====== Newsletter Section ====== */
+.newsletter {
+  background-color: #f0f8ff; /* light, airy background */
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.newsletter h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #2e8b57; /* green accent */
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsletter label {
+  font-weight: 600;
+  color: #333;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter input[type="text"]:focus,
+.newsletter input[type="email"]:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+.newsletter button {
+  background-color: #1e90ff;
+  color: white;
+  font-weight: 700;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #007acc;
+}
+
+/* ====== Call to Action Section ====== */
+.call-to-action {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.call-to-action h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #2e8b57;
+}
+
+.call-to-action p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.call-to-action .btn {
+  background-color: #ffd700; /* gold */
+  color: #2e8b57;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action .btn:hover {
+  background-color: #e6c200;
+}
+
+/* ====== Info Grid Section ====== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info-grid article {
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-grid article:hover {
+  transform: translateY(-6px);
+}
+
+.info-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.info-grid h3 {
+  color: #1e90ff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.info-grid p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ======================================================= */
